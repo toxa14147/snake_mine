@@ -11,8 +11,17 @@ namespace snake_mine_app
         
         static void Main(string[] args)
         {
-            Point p1 = new Point(1,3,'*');
-            p1.Draw();
+            Console.SetBufferSize(85, 85);
+            HorisontalLine lineUp = new HorisontalLine(2,80,2,'+');
+            HorisontalLine lineDown = new HorisontalLine(2,80,80,'+');
+            VerticalLine lineLeft = new VerticalLine(2, 80, 2, '+');
+            VerticalLine lineRight = new VerticalLine(2, 80, 80, '+');
+            lineUp.Drow();
+            lineDown.Drow();
+            lineLeft.Drow();
+            lineRight.Drow();
+
+
             Console.ReadLine();
         }
     }
