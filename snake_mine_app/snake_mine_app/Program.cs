@@ -8,11 +8,12 @@ namespace snake_mine_app
 {
     class Program
     {
+        
         static void Main(string[] args)
-        {//размер окна
-            Console.SetBufferSize(80, 85);
-            //стартовая точка р
-            point p = new point(1,3,'*');
+        {
+            Point p1 = new Point(1,3,'*');
+            p1.Draw();
+            Console.ReadLine();
         }
     }
 }

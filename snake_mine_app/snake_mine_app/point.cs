@@ -6,36 +6,22 @@ using System.Threading.Tasks;
 
 namespace snake_mine_app
 {
-    class point
-    { //координаты
+    class Point
+    {
         public int x;
         public int y;
         public char sym;
-        //задаём точку с координатами х у z
-        public point(int _x, int _y, char _sym) {
+        public Point (int _x, int _y, char _sym)
+        {
             x = _x;
             y = _y;
             sym = _sym;
         }
-        //задаём перемещение точке
-        public point(point p)
+        public void Draw ()
         {
-            x = p.x;
-            y = p.y;
-            sym = p.sym;
-        }
-        //рисуем точку
-        public void Drow()
-        {
-            Console.SetWindowPosition(x, y);
+            Console.SetCursorPosition(x, y);
             Console.Write(sym);
         }
-        //зачищаем точки
-        public void Clear()
-        {
-            char sym = ' ';
-            Console.Write(sym);
-        }
+        
     }
-    
 }
