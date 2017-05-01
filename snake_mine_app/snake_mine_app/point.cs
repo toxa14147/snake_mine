@@ -17,11 +17,49 @@ namespace snake_mine_app
             y = _y;
             sym = _sym;
         }
-        public void Draw ()
+       
+        public Point(Point p)
+        {
+            x = p.x;
+            y = p.y;
+            sym = p.sym;
+        }
+        public void Move(int offset,Direclion direction)
+        {
+            if(direction == Direclion.RIGHT)
+            {
+                x = x + offset ;
+            } else if(direction == Direclion.LEFT)
+            {
+                x = x - offset;
+            }
+            else if (direction == Direclion.UP)
+            {
+                y = y + offset;
+            }
+            else if (direction == Direclion.DOWN)
+            {
+                y = y - offset;
+            }
+            
+        }
+
+        
+        public void Clear()
+        {
+            sym = ' ';
+            Draw();
+        }
+
+        public void Draw()
         {
             Console.SetCursorPosition(x, y);
             Console.Write(sym);
         }
-        
+
+        public override string ToString()
+        {
+            return x + ", " + y + ", " + sym;
+        }
     }
 }
